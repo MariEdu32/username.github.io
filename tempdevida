@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Cálculo Estatístico de Vida</h2>
+
+<p>Por favor, preencha os campos abaixo:</p>
+
+Freqüência semanal: <input id="freq" type="number"><br><br>
+Horas por encontro: <input id="horas" type="number"><br><br>
+Anos de vida restante: <input id="anos" type="number"><br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcular() {
+  var freq = document.getElementById('freq').value;
+  var horas = document.getElementById('horas').value;
+  var anos = document.getElementById('anos').value;
+  
+  var vida = (freq * horas * (90 - anos));
+  
+  document.getElementById('resultado').innerHTML = "Tempo de vida: " + vida;
+}
+</script>
+
+</body>
+</html>
